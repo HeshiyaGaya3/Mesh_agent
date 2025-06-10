@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "acme-client": "4.2.5",
+    "loadavg-windows": "1.1.1",
+    "meshcentral": "^1.1.45",
+    "node-windows": "0.1.14",
+    "otplib": "12.0.1"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Ylianst/MeshCentral/master/meshcentral-config-schema.json",
+  "__comment1__": "This is a simple configuration file, all values and sections that start with underscore (_) are ignored. Edit a section and remove the _ in front of the name. Refer to the user's guide for details.",
+  "__comment2__": "See node_modules/meshcentral/sample-config-advanced.json for a more advanced example.",
+  "settings": {
+    "cert": "isqlglobal.com",
+    "_WANonly": true,
+    "_LANonly": true,
+    "sessionKey": "MyReallySecretPassword1",
+    "port": 443,
+    "_aliasPort": 443,
+    "redirPort": 80,
+    "_redirAliasPort": 80,
+	"AgentPing": 30,
+    "BrowserPing":30,
+    "TLSOffload": false,
+    "_TLSOffload": true,
+    "SelfUpdate": false,
+    "AllowFraming": "false",
+    "WebRTC": "false",
+	"devServer": {
+    "compress": true,
+    "disableHostCheck": true
+ } 
+  },
+  
+  "domains": {
+    "": {
+    "title": "Windows Support",
+    "agentcustomization": {
+     "displayName": "windows support",
+     "description": "my remote assistance.",
+     "companyName": "isql global",
+     "serviceName": "dllhost",
+     "image": "ri.png",
+     "fileName": "windows",
+	 "allowedOrigin": "meshcentral.isqlglobal.com",
+	 "certUrl": "https://isqlglobal.com"
+    }
+  }
+  },
+  "letsencrypt": {
+    "__comment__": "Requires NodeJS 8.x or better, Go to https://letsdebug.net/ first before trying Let's Encrypt.",
+    "email": "saravananing@gmail.com",
+    "names": "myserver.mydomain.com",
+    "skipChallengeVerification": true,
+    "production": false
+  }
+}
